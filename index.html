@@ -6,7 +6,71 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<style>
-		/* Your styles here! */
+		* {
+			font-family: Helvetica, sans-serif;
+			font-size: medium;
+		}
+
+		article {
+				margin-bottom: 20px;
+				background-color: mediumaquamarine;
+				padding: 1rem;
+				display: grid;
+				grid-template-columns: 2fr 3fr;
+				min-height: calc(200px + 1rem);
+			}
+		.image {
+			width: 200px;
+		}
+		.features {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				padding-left: 1rem;
+		}
+
+		.features p {
+				margin: 0.5em;
+		}
+		
+		.features-list {
+				display: flex;
+				align-self: flex-end;
+		}
+
+		.features-list > div {
+					margin-left: 5px;
+					background-color: bisque;
+					padding: 5px;
+					border-radius: 5px;
+					align-self: right;
+			}
+
+		.main {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 20px;
+		}
+
+		@media (max-width: 480px) {
+			.main {
+				display: grid;
+				grid-template-columns: 1fr;
+			}
+			article {
+				display: grid;
+				grid-template-columns: 1fr;
+			}
+			.image {
+				width: 100%;
+				margin-bottom: 1rem;
+			}
+		}
+
+
+
+
+		
 		
 	</style>
 </head>
